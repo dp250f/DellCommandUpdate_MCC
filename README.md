@@ -75,7 +75,7 @@ Select the newly created server farm and edit settings
 
 ![](images/IIS_ServerFarm_4.PNG)
 
--Under "Caching", change duration to 600 seconds
+-Under "Caching", change duration to 600 seconds, select "Enable request consolidation"
 
 ![](images/IIS_ServerFarm_5.PNG)
 
@@ -173,6 +173,10 @@ When run on a machine, the script will
 -Check if a MCC server is configured and if so, modify the baseLocation attribute to point it towards the MCC server for downloads
 
 -Write the XML file to the local filesystem
+
+-Add "EnableCatalogXML" policy item to the registry
+
+https://www.dell.com/support/manuals/en-us/command-update/admx_rg/configure-policy-settings
 
 -Call the DCU CLI to configure DCU to use said XML file
 
