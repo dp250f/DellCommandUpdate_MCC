@@ -156,11 +156,11 @@ This concludes the LEDBAT part of the configuration
 
 This section uses the [ConfigureDCUcatalog.ps1](ConfigureDCUcatalog.ps1) script.
 
-The script expects to find in the same folder that it is located a file "CatalogPC.zip" containing a valid "CatalogPC.xml" file for Dell Command Update.
+The script expects to find in the same folder that it is located a file "CatalogPC.zip" or "CatalogPC.cab" containing a valid "CatalogPC.xml" file for Dell Command Update.
 
-In addition, a secondary "PilotCatalogPC.zip" with similar content can be placed in the same folder in order to allow piloting.
+In addition, a secondary "PilotCatalogPC.zip" or "PilotCatalogPC.cab" with similar content can be placed in the same folder in order to allow piloting.
 
-Thirdly, the script supports creating a folder with the model name and putting a CatalogPC.zip and PilotCatalogPC.zip file in it to target a specific catalog to a specific model.
+Thirdly, the script supports creating a folder with the model name and putting a CatalogPC.zip (or .cab) and PilotCatalogPC.zip (or .cab) file in it to target a specific catalog to a specific model.
 
 #### 2.1) What the script does
 
@@ -168,7 +168,7 @@ When run on a machine, the script will
 
 -Look for the Dell Command Update CLI
 
--Unpack the appropriate ZIP file containing the catalog for the machine, taking into account piloting and model specific catalogs
+-Unpack the appropriate ZIP or CAB file containing the catalog for the machine, taking into account piloting and model specific catalogs
 
 -Check if a MCC server is configured and if so, modify the baseLocation attribute to point it towards the MCC server for downloads
 
@@ -188,11 +188,11 @@ Alternatively, use Dell Repository Manager to create one.
 
 https://www.dell.com/support/driver/en-us/DriversDetails?driverId=KWT9C
 
-#### 2.3) Creating the CatalogPC.zip file
+#### 2.3) Creating the CatalogPC.zip or CatalogPC.cab file
 
-Not difficult, just make a ZIP file with the CatalogPC.xml file in the root.
+Not difficult, just make a ZIP file with the CatalogPC.xml file in the root. Alternatively, just use the downloaded CatalogPC.cab file.
 
-PilotCatalogPC.zip is the same thing, just a different name.
+PilotCatalogPC.zip is the same thing, just a different name. Also works with cab file if you prefer.
 
 #### 2.4) Deploying the script
 
