@@ -156,11 +156,13 @@ This concludes the LEDBAT part of the configuration
 
 This section uses the [ConfigureDCUcatalog.ps1](ConfigureDCUcatalog.ps1) script.
 
-The script expects to find in the same folder that it is located a file "CatalogPC.zip" or "CatalogPC.cab" containing a valid "CatalogPC.xml" file for Dell Command Update.
+Run without parameters, the script expects to find in the same folder that it is located a file "CatalogPC.zip" or "CatalogPC.cab" containing a valid "CatalogPC.xml" file for Dell Command Update.
 
 In addition, a secondary "PilotCatalogPC.zip" or "PilotCatalogPC.cab" with similar content can be placed in the same folder in order to allow piloting.
 
 Thirdly, the script supports creating a folder with the model name and putting a CatalogPC.zip (or .cab) and PilotCatalogPC.zip (or .cab) file in it to target a specific catalog to a specific model.
+
+You may also specify the '-DownloadCatalog' parameter to have the script download CatalogPC.cab from your MCC server (or directly from Dell if there is no MCC in boundary)
 
 #### 2.1) What the script does
 
@@ -168,7 +170,7 @@ When run on a machine, the script will
 
 -Look for the Dell Command Update CLI
 
--Unpack the appropriate ZIP or CAB file containing the catalog for the machine, taking into account piloting and model specific catalogs
+-Optionally download and unpack the appropriate ZIP or CAB file containing the catalog for the machine, taking into account piloting and model specific catalogs
 
 -Check if a MCC server is configured and if so, modify the baseLocation attribute to point it towards the MCC server for downloads
 
