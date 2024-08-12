@@ -170,7 +170,9 @@ When run on a machine, the script will
 
 -Look for the Dell Command Update CLI
 
--Optionally download and unpack the appropriate ZIP or CAB file containing the catalog for the machine, taking into account piloting and model specific catalogs
+-Optionally download CatalogPC.cab from MCC server or Dell's CDN
+
+-Unpack the appropriate ZIP or CAB file containing the catalog for the machine, taking into account piloting and model specific catalogs
 
 -Check if a MCC server is configured and if so, modify the baseLocation attribute to point it towards the MCC server for downloads
 
